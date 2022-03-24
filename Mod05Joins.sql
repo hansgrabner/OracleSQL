@@ -60,3 +60,10 @@ SELECT First_Name AS F, Department_Name
         
         --Erweiterung - Job_History-Eintrag nur dann berücksichtigen / zählen
         , wenn größer als 24 Monate
+        
+           SELECT e.employee_id, e.First_Name, Count(h.employee_id)
+    FROM employees e LEFT OUTER JOIN job_history h
+    ON e.employee_id = h.employee_id
+    WHERE months_between(end_date, start_date)>24
+    GROUP BY e.employee_id, e.First_name
+    ORDER BY COUNT(h.employee_id);
