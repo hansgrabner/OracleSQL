@@ -58,4 +58,5 @@ SELECT First_Name AS F, Department_Name
     GROUP BY e.employee_id, e.First_name
     ORDER BY COUNT(h.employee_id);
         
-        --Erweiterung - Job_History-Eintrag nur dann berücksichtigen, wenn größer als 24 Monate
+        --Erweiterung - Job_History-Eintrag nur dann berücksichtigen / zählen
+        , wenn größer als 24 Monate
