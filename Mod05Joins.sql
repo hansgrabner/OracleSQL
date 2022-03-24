@@ -31,4 +31,15 @@ SELECT First_Name AS F, Department_Name
     
     SELECT First_Name, Department_Name
     FROM  Employees NATURAL JOIN Departments 
+    
+    
+       1. Aufgabe - JOIN -- First_Name, Job_Title
+    
+    SELECT e.First_Name, j.Job_Title
+    FROM employees e JOIN jobs j
+    ON e.job_id = j.job_id
+    
+      SELECT e.First_Name, j.Job_Title
+    FROM employees e JOIN jobs j
+    USING(job_id);
    
