@@ -18,3 +18,11 @@ WHERE department_id=10; --schränkt die Berchnungsgrundlage ein
 
 SELECT MIN(First_name) AS KleinsterVorname, MAX(hire_date) AS LetzteAnstellung
 FROM Employees;
+
+
+SELECT COUNT(*), COUNT(employee_id),
+COUNT(commission_pct),
+COUNT(NVL(commission_pct,0)),
+COUNT(First_name),
+COUNT(DISTINCT First_name) AS UnterchiedlicheVornamen
+FROM employees;
