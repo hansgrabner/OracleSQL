@@ -93,3 +93,11 @@ ON     e.salary
         
         Anzahl der Abteilungen pro Location, 
         Location soll auch ausgegeben werden, wenn es dort keine Abteilung gibt
+        
+        
+           SELECT COUNT(d.department_id), l.City
+    FROM Locations l LEFT JOIN departments d 
+    ON l.location_id=d.location_id
+    GROUP BY l.City
+     
+
