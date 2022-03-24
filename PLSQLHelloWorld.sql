@@ -1,5 +1,6 @@
 
 --https://www.tutorialspoint.com/plsql/plsql_quick_guide.htm
+--https://mkyong.com/oracle/oracle-stored-procedures-hello-world-examples/
 
 set serveroutput on
 
