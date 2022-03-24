@@ -85,3 +85,8 @@ SELECT First_Name AS F, Department_Name
    ORDER BY COUNT(m.First_Name)
      
 
+   SELECT e.last_name, e.salary, j.job_title
+FROM   employees e JOIN jobs j
+ON     e.salary 
+       BETWEEN j.min_salary AND j.max_salary
+     
