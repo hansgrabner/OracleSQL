@@ -77,3 +77,11 @@ SELECT First_Name AS F, Department_Name
         
         Aufgabe: Anzahl der Mitarbeiter pro Manager
    
+        
+        SELECT count(m.First_Name) as Mitarbeiter, v.Last_Name AS Vorgesetzter
+   FROM employees m FULL OUTER JOIN employees v
+   ON m.manager_id = v.employee_id
+   GROUP BY v.Last_Name
+   ORDER BY COUNT(m.First_Name)
+     
+
