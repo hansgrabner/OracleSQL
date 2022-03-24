@@ -86,6 +86,16 @@ HAVING COUNT(e.employee_id) = (
 )
 
 
+SELECT First_name, LENGTH(First_Name)
+FROM employees
+WHERE Length(first_name) = 
+(
+    SELECT MAX(Length(First_name)) FROM employees
+)
+ORDER BY Length(First_name) desc;
+
+
+
  
  
 
