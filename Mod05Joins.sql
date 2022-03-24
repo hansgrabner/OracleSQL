@@ -42,4 +42,13 @@ SELECT First_Name AS F, Department_Name
       SELECT e.First_Name, j.Job_Title
     FROM employees e JOIN jobs j
     USING(job_id);
+    
+    2. Anzahl der Jobs pro Mitarbeiter (
+        
+        
+           SELECT e.employee_id, e.First_Name, Count(h.employee_id)
+    FROM employees e JOIN job_history h
+    ON e.employee_id = h.employee_id
+    GROUP BY e.employee_id, e.First_name
+    ORDER BY COUNT(h.employee_id);
    
