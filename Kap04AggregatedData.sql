@@ -43,3 +43,21 @@ SELECT * FROM KundenInfo;
 
 SELECT AVG(Umsatz), AVG(NVL(Umsatz,0)) FROM  KundenInfo;
 
+
+
+SELECT *
+FROM employees
+WHERE Hire_date=
+(
+    --Subquery or Inner query, executed first
+    SELECT MIN(Hire_date) 
+    FROM employees
+);
+
+
+SELECT AVG(salary), job_id
+FROM Employees
+WHERE First_Name LIKE '%a%'  -- schränkt Berechnungsbaisis ein 
+GROUP BY job_id
+HAVING AVG(salary) > 10000 --- schränkt das gruppierte ergebnis ein
+ORDER BY AVG(salary) DESC;
