@@ -68,3 +68,46 @@ ORDER BY AVG(salary) DESC;
 3.	Summe der Gehälter pro Job_id
 4.	Alle Abteilungen mit mehr als 3 Mitarbeiter
 
+
+SELECT AVG(salary), job_id
+FROM Employees
+GROUP BY job_id
+ORDER BY job_id DESC;
+
+
+--Anzahl der Mitarbeiter in Abteilung 10
+
+SELECT COUNT(Last_name) As Variante1, COUNT(*) AS Variante2 
+FROM employees
+WHERE Department_id = 10;
+
+2.	Durchschnittle Gehalt nach Einstiegsmonat
+
+SELECT First_name, avg(salary), Hire_date
+FROM employees
+GROUP BY First_name, hire_date;
+
+
+SELECT ROUND(avg(salary),2) As Durchschnitt, substr(Hire_date,4,2)
+FROM employees
+GROUP BY  substr(hire_date,4,2);
+
+SELECT ROUND(avg(salary),2) As Durchschnitt, TO_CHAR(Hire_date,'MM')
+FROM employees
+GROUP BY TO_CHAR(hire_date,'MM')
+
+
+
+3.	Summe der Gehälter pro Job_id
+
+SELECT sum(salary), job_id
+FROM employees
+GROUP BY job_id
+HAVING SUM(Salary) < 10000;
+
+4.	Alle Abteilungen mit mehr als 3 Mitarbeiter
+SELECT department_id, COUNT(*)
+FROM EMployees
+GROUP BY department_id
+HAVING COUNT(*) > 3
+ORDER BY COUNT(*) ASC;
