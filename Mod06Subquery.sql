@@ -35,4 +35,28 @@ ORDER BY COUNT(e.employee_id) DESC
  
  
  
+ SELECT MAX(COUNT(*)) As MaxAnzahl
+FROM  departments d JOIN  Employees e
+ON d.department_id = e.department_id
+GROUP BY d.department_name
+
+
+
+ 
+ SELECT d.department_name, COUNT(e.employee_id)
+FROM departments d JOIN  Employees e
+ON d.department_id = e.department_id
+GROUP BY d.department_name
+HAVING COUNT(e.employee_id) = (
+  
+         SELECT MAX(COUNT(*)) As MaxAnzahl
+      FROM  departments d JOIN  Employees e
+      ON d.department_id = e.department_id
+      GROUP BY d.department_name
+
+  )
+ORDER BY COUNT(e.employee_id) DESC
+
+ 
+ 
 
