@@ -26,3 +26,20 @@ COUNT(NVL(commission_pct,0)),
 COUNT(First_name),
 COUNT(DISTINCT First_name) AS UnterchiedlicheVornamen
 FROM employees;
+
+
+
+CREATE Table KundenInfo
+(
+    Kundennamen varchar(20),
+    Umsatz number(10,2)
+)
+
+INSERT INTO KundenInfo(Kundennamen, Umsatz) VALUES('A',100);
+INSERT INTO KundenInfo(Kundennamen, Umsatz) VALUES('B',NULL);
+INSERT INTO KundenInfo(Kundennamen, Umsatz) VALUES('C',200);
+
+SELECT * FROM KundenInfo;
+
+SELECT AVG(Umsatz), AVG(NVL(Umsatz,0)) FROM  KundenInfo;
+
