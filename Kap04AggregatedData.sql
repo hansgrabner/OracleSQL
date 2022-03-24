@@ -111,3 +111,14 @@ FROM EMployees
 GROUP BY department_id
 HAVING COUNT(*) > 3
 ORDER BY COUNT(*) ASC;
+
+
+
+14 Jahre --- 7 Leute
+15 Jahre --- 12 Leute
+16 Jahre --- 29
+
+SELECT COUNT(*),  ROUND(Months_Between(sysdate,hire_date) / 12)
+FROM Employees
+GROUP BY   ROUND(Months_Between(sysdate,hire_date) / 12)
+ORDER BY ROUND(Months_Between(sysdate,hire_date) / 12)
