@@ -90,3 +90,6 @@ FROM   employees e JOIN jobs j
 ON     e.salary 
        BETWEEN j.min_salary AND j.max_salary
      
+        
+        Anzahl der Abteilungen pro Location, 
+        Location soll auch ausgegeben werden, wenn es dort keine Abteilung gibt
