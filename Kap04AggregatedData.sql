@@ -61,3 +61,10 @@ WHERE First_Name LIKE '%a%'  -- schränkt Berechnungsbaisis ein
 GROUP BY job_id
 HAVING AVG(salary) > 10000 --- schränkt das gruppierte ergebnis ein
 ORDER BY AVG(salary) DESC;
+
+
+1.	Anzahl der Mitarbeiter in Abteilung 10
+2.	Durchschnittle Gehalt nach Einstiegsmonat
+3.	Summe der Gehälter pro Job_id
+4.	Alle Abteilungen mit mehr als 3 Mitarbeiter
+
