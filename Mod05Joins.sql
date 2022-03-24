@@ -67,3 +67,11 @@ SELECT First_Name AS F, Department_Name
     WHERE months_between(end_date, start_date)>24
     GROUP BY e.employee_id, e.First_name
     ORDER BY COUNT(h.employee_id);
+        
+        
+        
+           SELECT m.First_Name as Mitarbeiter, v.First_Name AS Vorgesetzter
+   FROM employees m LEFT JOIN employees v
+   ON m.manager_id = v.employee_id
+   ORDER BY v.First_NAme
+   
