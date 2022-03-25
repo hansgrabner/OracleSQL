@@ -1,6 +1,9 @@
 
 --https://www.tutorialspoint.com/plsql/plsql_quick_guide.htm
 --https://mkyong.com/oracle/oracle-stored-procedures-hello-world-examples/
+--https://cheatography.com/sjm/cheat-sheets/sql-commands/
+--https://cheatography.com/tag/sql/
+--https://www.adldata.org/wp-content/uploads/2015/06/Oracle-sql_cheatsheet.pdf
 
 set serveroutput on
 
