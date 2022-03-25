@@ -4,6 +4,7 @@
 --https://cheatography.com/sjm/cheat-sheets/sql-commands/
 --https://cheatography.com/tag/sql/
 --https://www.adldata.org/wp-content/uploads/2015/06/Oracle-sql_cheatsheet.pdf
+--https://www.oracletutorial.com/oracle-administration/oracle-revoke/
 
 set serveroutput on
 
